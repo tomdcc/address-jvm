@@ -1,0 +1,17 @@
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+dependencies {
+    testCompile "org.codehaus.groovy:groovy-all:$groovyVersion"
+    testCompile "org.spockframework:spock-core:$spockVersion"
+
+    testRuntime "org.slf4j:slf4j-api:1.7.4"
+}
+
+
+modifyPom { pom ->
+	pom.project {
+		name "Address JVM Core"
+		description "The address library contains classes for storage and validation of international addresses"
+	}
+}

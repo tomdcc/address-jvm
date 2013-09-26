@@ -1,0 +1,19 @@
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+dependencies {
+	provided 'org.springframework:spring-context:3.2.0.RELEASE'
+
+    testCompile "org.codehaus.groovy:groovy-all:$groovyVersion"
+    testCompile "org.spockframework:spock-core:$spockVersion"
+
+    testRuntime "org.slf4j:slf4j-api:1.7.4"
+}
+
+
+modifyPom { pom ->
+	pom.project {
+		name "Address JVM Spring"
+		description "Provides address validator compatible with Spring validation framework"
+	}
+}
