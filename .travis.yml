@@ -1,0 +1,13 @@
+language: java
+jdk:
+  - oraclejdk7
+branches:
+  only:
+  - master
+install: ./gradlew clean assemble testClasses
+script: ./gradlew test
+after_success: ./gradlew uploadSnapshots
+env:
+  global:
+  - secure: "JyJhJbZOh/uckoRofi5jj/QMNgAWiKJa2d7nh+V9ExnPYfQkSAOKvusRvdhXHtmK10rRDlPKfzzunZuKCNcI0hPuZbx59MPT2cU03NKao36Rlsve3TZHa6S0wuQzY4NIB8yfavHCuQW1cPcUVumDDCrI4jodr941pqqT91AUdrc="
+  - secure: "j0W+ozz8c8C8butcveg/1TgYHIqa4qBFe02Y8MO/1AIywEA4Wus7YhIFTynfrVxiq/s/QO2/2FppIDsMRHoIDbcEBPw1Xz4MCi5MKYg3H9F4a8XkS5Lhkq7dP4NiWodhj37Otol+TNiHBFNgssNQhuSt4LlpJmVcS9saYHUv2aM="
